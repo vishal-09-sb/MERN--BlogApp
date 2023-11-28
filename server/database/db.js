@@ -1,9 +1,9 @@
 import mongoose from 'mongoose'
 
 
-export const Connection = () => {
+export const Connection = (username, password) => {
 
-    const URL = `mongodb://mongo:mongo@ac-xzs3xrc-shard-00-00.tzawoio.mongodb.net:27017,ac-xzs3xrc-shard-00-01.tzawoio.mongodb.net:27017,ac-xzs3xrc-shard-00-02.tzawoio.mongodb.net:27017/?ssl=true&replicaSet=atlas-vg5bla-shard-0&authSource=admin&retryWrites=true&w=majority`;
+    const URL = `mongodb://${username}:${password}@ac-drcsgl6-shard-00-00.g74vntr.mongodb.net:27017,ac-drcsgl6-shard-00-01.g74vntr.mongodb.net:27017,ac-drcsgl6-shard-00-02.g74vntr.mongodb.net:27017/?ssl=true&replicaSet=atlas-ilxiyk-shard-0&authSource=admin&retryWrites=true&w=majority`;
     try{
 
         mongoose.connect(URL, { useNewUrlParser:  true });
@@ -16,3 +16,4 @@ export const Connection = () => {
 }
 
 export default Connection;
+

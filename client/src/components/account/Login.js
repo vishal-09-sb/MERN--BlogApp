@@ -67,6 +67,9 @@ const Login = () => {
     setSignup({ ...signup, [e.target.name] : e.target.value});
 
   }
+  const signupUser = () => {
+    
+  }
 
   return (
     <Component>
@@ -88,7 +91,7 @@ const Login = () => {
             <TextField variant="standard" onChange={(e) => onInputChange(e)} name = "username" label="Enter Username" />
             <TextField variant="standard" onChange={(e) => onInputChange(e)} name = "password" label="Enter Password" />
 
-            <SignupButton>Login</SignupButton>
+            <SignupButton onClick={() => signupUser()}>SignUp</SignupButton>
             <Text style={{ textAlign: "center" }}>OR</Text>
             <LoginButton variant="contained" onClick={() => toggleSignup()}>
               Already have an account{" "}

@@ -16,4 +16,3 @@ export const Connection = (username, password) => {
 }
 
 export default Connection;
-
